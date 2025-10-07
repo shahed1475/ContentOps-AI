@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animation utilities for premium login motion */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slowPulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+
+.animate-fade-in { animation: fadeIn 300ms ease-out forwards; }
+.animate-slide-up { animation: slideUp 300ms ease-out forwards; }
+.animate-slow-pulse { animation: slowPulse 6s ease-in-out infinite; }
+
+html, body, #root { height: 100%; }
+body { @apply bg-gray-950 text-gray-100 font-sans; }
