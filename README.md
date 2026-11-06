@@ -20,10 +20,11 @@ A content operations platform for planning, creating, scheduling and measuring s
 ## Run it locally
 
 ```
+cp .env.example .env
 docker compose up --build
 ```
 
-The API runs on port 8000 and the dashboard on port 5173. The compose file ships with development-only values for the database password and JWT secrets. Replace them with your own secrets before any real deployment, and never commit real secrets.
+The API runs on port 8000 and the dashboard on port 5173. Edit `.env` to set your own database password and JWT secrets. If you skip that step, the compose file falls back to development-only values, so replace them before any real deployment. Never commit your `.env` file.
 
 ## Project layout
 
